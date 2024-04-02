@@ -154,7 +154,7 @@
       <div class="logout">
         <ul>
           <li>
-            <a href="#">
+            <a href="loginView">
               <svg class="iconos-nav" version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
                   <path d="M285 5101 c-108 -39 -199 -121 -251 -226 l-29 -60 0 -2040 0 -2040 32 -65 c18 -36 46 -81 62 -101 70 -84 101 -97 829 -340 l687 -230 105 3 c96 3 112 6 173 36 81 40 156 111 191 180 43 84 56 154 56 294 l0 128 394 0 c394 0 395 0 475 25 196 62 353 236 396 440 12 56 15 172 15 590 0 520 0 521 -22 565
