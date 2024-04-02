@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class usuarios extends Model
+class usuarios extends Authenticatable
 {
-    use HasFactory;
-    protected $primarykey='idu';
-    protected $fillable=['idu','nomb_u','contraseña','nombre','apellidos','fecha_nac','correo'];
+    use Notifiable;
+
+    protected $primaryKey = 'idu';
+
+    protected $fillable = [
+        'nomb_u', 'contraseña', 'nombre', 'apellidos', 'fecha_nac', 'correo',
+    ];
 }
