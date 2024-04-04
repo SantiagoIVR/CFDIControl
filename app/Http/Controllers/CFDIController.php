@@ -30,6 +30,11 @@ class CFDIController extends Controller
         ]);
         return redirect()->route('inicio');
     }
+
+    public function recuperar()
+    {
+        return view('recuperar');
+    }
     public function inicio()
     {
         return view('inicio');

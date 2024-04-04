@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get('autoregistro',[CFDIController::class,'autoregistro'])->name('autoregistro');
 Route::POST('guardar',[CFDIController::class,'guardar'])->name('guardar');
 
+Route::get('recuperar',[CFDIController::class,'recuperar'])->name('recuperar');
+
 Route::get('inicio', [CFDIController::class, 'inicio'])->name('inicio');
 Route::GET('loginView', [CFDIController::class, 'loginView'])->name('loginView');
 Route::POST('login', [CFDIController::class, 'login'])->name('login');

@@ -22,7 +22,7 @@
             <input type="text" class="big" name="usuario_correo" id="usuario_correo" placeholder="Ingresa usuario o correo">
             <label for="contraseña">Contraseña</label>
             <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa la contraseña" >
-            <center><a href="#">Olvidaste tu contraseña?</a></center>
+            <center><a href="{{ route('recuperar')}}">Olvidaste tu contraseña?</a></center>
             @if (Session:: has('mensaje'))
             <div style="background-color: #ffcccc; border: 1px solid #ff0000; color: #ff0000; padding: 15px;">
                 <strong>Error en el inicio de sesión: <br></strong> {{ Session::get('mensaje')}}
