@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('autoregistro',[CFDIController::class,'autoregistro'])->name('autoregistro');
+
+
 Route::get('inicio', [CFDIController::class, 'inicio'])->name('inicio');
 Route::GET('loginView', [CFDIController::class, 'loginView'])->name('loginView');
 Route::POST('login', [CFDIController::class, 'login'])->name('login');

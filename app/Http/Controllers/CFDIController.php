@@ -12,6 +12,11 @@ use App\Models\usuarios;
 class CFDIController extends Controller
 {
     //
+
+    public function autoregistro()
+    {
+        return view('autoregistro');
+    }
     public function inicio()
     {
         return view('inicio');
