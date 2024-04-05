@@ -1,6 +1,6 @@
 // Obtener las etiquetas <a> específicas
-const aAll = document.querySelector(".submenu-a.all");
-const aPay = document.querySelector(".submenu-a.pay");
+const aAll = document.querySelector(".submenu-a.datos");
+const aPay = document.querySelector(".submenu-a.seguridad");
 
 // Añadir estilos a los botones de pestaña en función de la vista para resaltar en qué vista está el usuario
 function resaltarBoton(elemento) {
@@ -16,10 +16,10 @@ function quitarResaltado() {
 // Verificar si la URL actual contiene el fragmento que identifica la vista específica 
 function verificarVista() {
     const urlActual = window.location.href;
-    if (urlActual.includes("estatuscfdi_all")) {
+    if (urlActual.includes("showmiperfil")) {
         quitarResaltado();
         resaltarBoton(aAll);
-    } else if (urlActual.includes("estatuscfdi_pay")) {
+    } else if (urlActual.includes("showseguridad")) {
         quitarResaltado();
         resaltarBoton(aPay);
     }
