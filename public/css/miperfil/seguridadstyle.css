@@ -1,0 +1,172 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap'
+);
+
+:root {
+    --color-background:rgb(255,255,255);
+
+    --color-cont-principal:white;
+    --color-texto-body: rgb(117, 117, 117);
+
+    --color-submenu-boton: rgb(23, 23, 23);
+    --color-submenu-texto: rgb(255,255,255);
+    --color-submenu-hover: rgb(0, 0, 0);
+
+    --color-submenu-boton-disable: rgb(255, 255, 255);
+    --color-submenu-texto-disable: rgb(52, 58, 64);
+    --color-submenu-borde-disable: rgb(52, 58, 64);
+    --color-submenu-hoverbk-disable: rgb(52, 58, 64);
+    --color-submenu-hovertx-disable: rgb(255, 255, 255);
+
+    --color-input-background:#f2f2f2;
+    --color-input-border: #c6c6c6; 
+
+    --background-filas-hover: #f2f2f2;
+
+    --color-scroll:#c1c1c1;
+    --color-scroll-hover:rgb(68,69,74);
+
+    --color-btn-upload: rgb(57, 57, 57);
+    --color-btn-upload-hover: rgb(61, 124, 206);
+
+    --color-boton2-background: rgb(61, 124, 206);
+    --color-boton2-texto: rgb(255, 255, 255);
+    --color-boton2-background-hover: rgb(86, 135, 200);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    color: #30383c;
+    background-color: var(--color-background);
+    font-size: 16px;
+}
+/* Estilos para resaltar la sección del sidebar en el que nos encontramos */
+#miperfil {
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+/* MENÚ DE NAVEGACIÓN CONTEXTUAL */
+.nav-contextual {
+    padding-bottom: 10px;
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+}
+
+/* PESTAÑAS DE NAVEGACIÓN SUPERIORES */
+.cont-submenu {
+    /* border: 2px solid red; */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    display: inline-block;
+    ul {
+        list-style: none;
+        margin-left: 0;
+        li {
+            display: inline-block;
+            text-align: center;
+            margin: 0;
+            a {
+                border: 2px solid var(--color-submenu-borde-disable);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                text-decoration: none;
+                display: block;
+                padding: 15px 25px;
+                background-color: var(--color-submenu-boton-disable);
+                color: var(--color-submenu-texto-disable);
+            }
+            a:hover {
+                background-color: var(--color-submenu-hoverbk-disable);
+                color: var(--color-submenu-hovertx-disable);
+            }
+        }
+    }
+}
+.cont-submenu .submenu a.submenu-a.btn-activo {
+    border: 3px solid var(--color-submenu-boton);
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: var(--color-submenu-boton);
+    color: var(--color-submenu-texto);
+}
+.cont-submenu .submenu a.submenu-a.btn-activo:hover {
+    border: 3px;
+    background-color: var(--color-submenu-hover);
+    color: white;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.cont-principal {
+    /*border: 2px solid green;*/
+    display: flex;
+    height: 80vh;
+    /* width: 100%; */
+    margin: 0 auto auto auto; /*arriba izq abajo der */
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow-y: auto;
+    .sec-img {
+        /* border: 2px solid red; */
+        width: 250px;
+        display: flex;
+        flex: 1;
+        flex-direction: column; /* Alinear los elementos en una columna */
+        align-items: center; /* Alinear verticalmente al centro */
+        img {
+            /* border: 1px solid blue; */
+            width: 250px;
+        }
+    }
+    .sec-form {
+        /* border: 1px solid blue; */
+        flex: 2;
+        padding: 20px;
+        label {
+            /*border: 2px solid red;*/
+            display: block; /* Hacer que los labels se muestren como bloques */
+            width: 250px;
+            padding: 7px 7px 0 7px;
+            margin-bottom: 5px; /* Espaciado entre cada label e input */
+            font-size: 20px;
+        }
+        input {
+            border: 2px solid var(--color-input-border);
+            display: block; /* Hacer que los inputs y selects se muestren como bloques */
+            width: 500px;
+            margin-bottom: 10px; /* Espaciado entre cada input y select */
+            padding: 10px;
+            border-radius: 10px;
+            background: var(--color-input-background);
+        }
+        .btn {
+            margin-top: 30px;
+            justify-content:left;
+            display: flex;
+            input {
+                width: 150px;
+                margin: 0 10px;
+                background: var(--color-boton2-background);
+                color: var(--color-boton2-texto);
+                border-radius: 7px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+            input:hover {
+                background: var(--color-boton2-background-hover);
+                color: var(--color-boton2-texto);
+            }
+        }
+    }
+}

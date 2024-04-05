@@ -12,6 +12,29 @@ use App\Models\usuarios;
 class CFDIController extends Controller
 {
     //
+
+    public function autoregistro()
+    {
+        return view('autoregistro');
+    }
+
+    public function guardar()
+    {
+        $validatedData = $request->validate([    
+            'nombre'=>'required|regex:/^[A-Z][A-Z,a-z, ,ó,é,ü,ñ,Ñ]+$/|min:3|max:30',
+            'correo'=>'email|min:15|max:40',
+            'fecha_nac'=>'required|date',
+            'nomb_u'=>'required|min:3|max:30',
+            'contraseña'=>'required|min:8|max:12',
+     
+        ]);
+        return redirect()->route('inicio');
+    }
+
+    public function recuperar()
+    {
+        return view('recuperar');
+    }
     public function inicio()
     {
         return view('inicio');
