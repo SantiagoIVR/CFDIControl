@@ -31,8 +31,8 @@ body {
 
 .cont-principal {
     /*border: 2px solid orange;*/
-    height: 70%;
-    width: 40%;
+    height: 50%;
+    width: 50%;
     display: flex;
     margin: 0 auto 0 auto;
     padding: 30px;
@@ -53,7 +53,7 @@ body {
     form label {
         /*border: 2px solid red;*/
         display: block; /* Hacer que los labels se muestren como bloques */
-        width: 350px;
+        width: 250px;
         padding: 7px 7px 0 7px;
         margin-bottom: 5px; /* Espaciado entre cada label e input */
     }
@@ -84,7 +84,7 @@ body {
         justify-content: center;
         display: flex;
         input {
-            width: 190px;
+            width: 150px;
             margin: 0 10px;
             background: var(--color-boton2-background);
             color: var(--color-boton2-texto);
@@ -96,57 +96,5 @@ body {
             background: var(--color-boton2-background-hover);
             color: var(--color-boton2-texto);
         }
-    }
-}
-
-.ventana-emergente {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
-}
-
-.formulario-ventana {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%;
-    border-radius: 10px;
-}
-
-.formulario-ventana input[type="text"],
-.formulario-ventana input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.formulario-ventana input[type="button"] {
-    margin-top: 30px;
-    justify-content: center;
-    display: flex;
-    input {
-        width: 190px;
-        margin: 0 10px;
-        background: var(--color-boton2-background);
-        color: var(--color-boton2-texto);
-        border-radius: 7px;
-        font-size: 17px;
-        cursor: pointer;
-    }
-    input:hover {
-        background: var(--color-boton2-background-hover);
-        color: var(--color-boton2-texto);
     }
 }

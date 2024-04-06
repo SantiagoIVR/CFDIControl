@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto-Registro</title>
-  <link href="{!! asset('css/autoregistro.css') !!}" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/autoregistro.css">
 
 </head>
 <body>

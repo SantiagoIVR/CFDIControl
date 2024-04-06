@@ -16,7 +16,9 @@
                 <p>LOGIN</p>
             </div>
             <div class="image">
-                <img class="rounded float-left" src="inicio.jpg" height="165" width="155">
+   
+                <center><img class="rounded" src = "{{asset('archivos/usuario.png')}}" 
+                 height =150 width = 150 ></center>
             </div>
             <label for="usuario_correo">Nombre de Usuario o Correo</label>
             <input type="text" class="big" name="usuario_correo" id="usuario_correo" placeholder="Ingresa usuario o correo">

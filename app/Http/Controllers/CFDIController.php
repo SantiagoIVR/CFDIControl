@@ -12,13 +12,12 @@ use App\Models\usuarios;
 class CFDIController extends Controller
 {
     //
-
     public function autoregistro()
     {
         return view('autoregistro');
     }
 
-    public function guardar()
+    public function guardar(Request $request) 
     {
         $validatedData = $request->validate([    
             'nombre'=>'required|regex:/^[A-Z][A-Z,a-z, ,ó,é,ü,ñ,Ñ]+$/|min:3|max:30',
@@ -28,17 +27,14 @@ class CFDIController extends Controller
             'contraseña'=>'required|min:8|max:12',
      
         ]);
-        return redirect()->route('inicio');
+        return redirect()->route('index');
     }
-
     public function recuperar()
     {
         return view('recuperar');
     }
-    public function inicio()
-    {
-        return view('inicio');
-    }
+
+
 
     public function loginView()
     {

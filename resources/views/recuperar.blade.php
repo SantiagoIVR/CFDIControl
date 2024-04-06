@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recuperar</title>
-  <link href="{!! asset('css/recuperarcontrasena.css') !!}" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/recuperarcontrasena.css">
  
 </head>
 <body>
@@ -35,7 +35,8 @@
             </form>
         </div>
     </div>
-    <script src="{!! asset('js/activar-boton.js') !!}"></script>
     
+      <!-- Estilos JavaScript del sidebar -->
+      <script src="{!! asset('js/activar-boton.js') !!}"></script>
 </body>
 </html>

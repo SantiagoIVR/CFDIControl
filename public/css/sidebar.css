@@ -351,7 +351,7 @@ font-size: 25px;
 /* MAIN */
 main{
     margin-left: 250px;
-    padding: 40px;
+    padding: 10px 40px 40px 40px; /* arriba der abajo izq */
     transition: margin-left 0.5s ease;
     .btn-outline {
         border: 2px solid #1f9bcf;
