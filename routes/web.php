@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 /* INICIO */
 Route::get('index',[menucontroller::class,'index'])->name('index');
+Route::get('descargarManualUsuario', [menucontroller::class, 'descargarManualUsuario'])->name('descargarManualUsuario');
+Route::get('descargarManualTecnico', [menucontroller::class, 'descargarManualTecnico'])->name('descargarManualTecnico');
+Route::get('descargarLicencia', [menucontroller::class, 'descargarLicencia'])->name('descargarLicencia');
+
 /* MI PERFIL */
 Route::get('showmiperfil',[miperfilcontroller::class,'showmiperfil'])->name('showmiperfil');
 Route::get('showseguridad',[miperfilcontroller::class,'showseguridad'])->name('showseguridad');
