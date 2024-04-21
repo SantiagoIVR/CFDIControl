@@ -7,7 +7,7 @@
 @section('title', 'Inicio')
 
 @section('estilos_adicionales')
-    <link href="{{ asset('css/iniciostyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/iniciostyle.css?v=2') }}" rel="stylesheet">
 @endsection
 
 @section('contenido')
@@ -15,7 +15,9 @@
     <!-- Menú Contextual -->
     <div class="nav-contextual">
         <a href="{{ route('index') }}"><span>Inicio</span></a>
-        <button onclick="mostrarEquipo()" style="margin-top: 20px;">Mostrar Equipo de Desarrollo</button>
+        <a href="#equipoDeDesarrollo">
+            <button onclick="mostrarEquipo()" style="margin-top: 20px;">Mostrar Equipo de Desarrollo</button>
+        </a>
     </div>
 
     <div class="cont-principal">
@@ -50,24 +52,24 @@
 
         <div class="cont-bottom">
             <div class="cont-man-usuario">
-                <button class="pdf-btn">
+                <a href="{{ route('descargarManualUsuario') }}" class="pdf-btn" download>
                     <h2>Manual de Usuario</h2>
                     <img src="{!! asset('archivos/pdf_download.png') !!}" alt="">
-                </button>
+                </a>
                 <textarea class="infografia"name="" id="" cols="30" rows="10" placeholder="Infografía"></textarea>
             </div>
             <div class="cont-man-tec">
-                <button class="pdf-btn">
+                <a href="{{ route('descargarManualTecnico') }}" class="pdf-btn" download>
                     <h2>Manual Técnico</h2>
                     <img src="{!! asset('archivos/pdf_download.png') !!}" alt="">
-                </button>
+                </a>
                 <textarea class="infografia"name="" id="" cols="30" rows="10" placeholder="Infografía"></textarea>
             </div>
             <div class="cont-lic">
-                <button class="pdf-btn">
+                <a href="{{ route('descargarLicencia') }}" class="pdf-btn" download>
                     <h2>Licencia</h2>
                     <img src="{!! asset('archivos/pdf_download.png') !!}" alt="">
-                </button>
+                </a>
             </div>
         </div>
     </div>
