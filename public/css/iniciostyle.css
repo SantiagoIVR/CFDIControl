@@ -106,14 +106,22 @@ body {
         margin-top: 15px;
         
         .pdf-btn {
+            display: flex; /* Establece el contenedor como flexbox */
+            flex-direction: column; /* Coloca los elementos en columna */
+            align-items: center; /* Centra los elementos horizontalmente */
+            justify-content: center; /* Centra los elementos verticalmente */
+            text-align: center; /* Alinea el texto en el centro */
             border: none;
             width: 150px;
             height: 190px;
             background: none;
+            text-decoration: none; /* Quita el subrayado */
+            color: black; /* Cambia el color del texto */
             cursor: pointer;
             h2 {
                 /* border: 1px solid red; */
                 font-size: 15px;
+                margin: 0; /* Elimina el margen por defecto del h2 */
             }
             img {
                 /* border: 1px solid blue; */
