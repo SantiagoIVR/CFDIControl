@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recuperar</title>
+  <title>Recuperar-Contraseña</title>
+  
   <link rel="stylesheet" href="css/recuperarcontrasena.css">
- 
+  <link rel="icon" href="{!! asset ('archivos/favicon.ico') !!}" type="image/x-icon">
+  
 </head>
 <body>
     <div class="cont-principal">
-        <form action="" class="formulario">
+        <form action="{{route('validar')}}" method="POST" class="formulario">
+        {{ csrf_field() }}
             <div class="titulo">
                 <p>Recuperar Contraseña</p>
             </div>
             <label for="">Ingrese correo electrónico</label>
-            <input type="text" class="big" name="" id="" placeholder="Ingresa correo">
+            @if($errors->first('correo'))
+            <p class="text-warning">{{$errors->first('correo')}}</p>
+            @endif
+            <input type="text" class="big" name="correo"  placeholder="Ingresa correo">
             <label for="">Fecha de Nacimiento</label>
-            <input type="date" name="" id="">
-            <center><a href="#">Iniciar Sesión</a></center>
+            @if($errors->first('fecha_nac'))
+            <p class="text-warning">{{$errors->first('fecha_nac')}}</p>
+            @endif
+            <input type="date" name="fecha_nac" >
+            <center><a href="{{route('loginView')}}">Iniciar Sesión</a></center>
             <div class="btn">
-                <input type='button' name='RecuperarContraseña' value='Recuperar Contraseña' onclick='mostrarVentana()'>
-             
+                <input type='submit' name = 'Guardar' value = 'Guardar'>
+                
             </div>
         </form>
-        <div id="ventanaEmergente" class="ventana-emergente">
-            <form action="" class="formulario-ventana">
-                <label for="">Usuario</label>
-                <p> Usuario1</p>
-                <label for="">Contraseña</label>
-                <p> 12345</p>
-                <div class="btn">
-                    <input type='button' value='Volver al Login' onclick='ocultarVentana()'>
-                </div>
-            </form>
-        </div>
+        
     </div>
+
     
-      <!-- Estilos JavaScript del sidebar -->
-      <script src="{!! asset('js/activar-boton.js') !!}"></script>
+   
+      
+     
 </body>
 </html>
