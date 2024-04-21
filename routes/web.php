@@ -7,6 +7,10 @@ use App\Http\Controllers\menucontroller;
 use App\Http\Controllers\miperfilcontroller;
 use App\Http\Controllers\ingresoscontroller;
 use App\Http\Controllers\finanzascontroller;
+use App\Http\Controllers\autoregistrocontroller;
+use App\Http\Controllers\logincontroller;
+use App\Http\Controllers\recuperarcontroller;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,6 +26,17 @@ Route::get('index',[menucontroller::class,'index'])->name('index');
 Route::get('descargarManualUsuario', [menucontroller::class, 'descargarManualUsuario'])->name('descargarManualUsuario');
 Route::get('descargarManualTecnico', [menucontroller::class, 'descargarManualTecnico'])->name('descargarManualTecnico');
 Route::get('descargarLicencia', [menucontroller::class, 'descargarLicencia'])->name('descargarLicencia');
+
+/* LOGIN */
+Route::get('loginView', [logincontroller::class, 'loginView'])->name('loginView');
+
+/* AUTOREGISTRO */
+Route::get('autoregistro',[autoregistrocontroller::class,'autoregistro'])->name('autoregistro');
+Route::POST('guardarregistro',[autoregistrocontroller::class,'guardarregistro'])->name('guardarregistro');
+
+/* RECUPERAR */
+Route::get('recuperar',[recuperarcontroller::class,'recuperar'])->name('recuperar');
+Route::POST('validar',[recuperarcontroller::class,'validar'])->name('validar');
 
 /* MI PERFIL */
 Route::get('showmiperfil',[miperfilcontroller::class,'showmiperfil'])->name('showmiperfil');
